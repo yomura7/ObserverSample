@@ -1,0 +1,28 @@
+@startuml
+
+class Hero {
+  - hp
+  - observerList
+  + addObserver()
+  + notifyObserver()
+  + encountMonster()
+  + getHp()
+  + setHp()
+}
+
+class Wizard {
+  + update()
+}
+
+interface Observer {
+  + update()
+}
+
+class Main {
+}
+
+Main -- Hero : new Hero()
+Hero *- Wizard
+Observer <|-- Wizard
+
+@enduml

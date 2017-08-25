@@ -1,4 +1,4 @@
-# Observer
+# Observer Sample
 - Observer pattern sample for desigin pattern hands-on
 
 ## class diagram

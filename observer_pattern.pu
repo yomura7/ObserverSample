@@ -2,9 +2,6 @@
 
 class Hero {
   - hp
-  - observerList
-  + addObserver()
-  + notifyObserver()
   + encountMonster()
   + getHp()
   + setHp()
@@ -14,6 +11,12 @@ class Wizard {
   + update()
 }
 
+abstract class Subject {
+  - observerList
+  + addObserver()
+  + notifyObserver()
+}
+
 interface Observer {
   + update()
 }
@@ -21,8 +24,11 @@ interface Observer {
 class Main {
 }
 
-Main -- Hero : new Hero()
-Hero *- Wizard
 Observer <|-- Wizard
+Subject <|-- Hero
+Observer -* Subject
+
+Wizard -- Main : new
+Hero -- Main : new
 
 @enduml

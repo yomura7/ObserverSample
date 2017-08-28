@@ -1,23 +1,11 @@
-import java.util.ArrayList;
 import java.util.Random;
 
-public class Hero {
+public class Hero extends Subject {
 
     private int hp;
-    private ArrayList<Observer> observerList = new ArrayList<Observer>(0);
 
     public Hero() {
         hp = 100;
-    }
-
-    public void addObserver(Observer observer) {
-        observerList.add(observer);
-    }
-
-    public void notifyObserver() {
-        for (Observer observer : observerList) {
-            observer.update(this);
-        }
     }
 
     public void encountMonster() {

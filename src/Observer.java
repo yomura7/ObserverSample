@@ -1,3 +1,3 @@
 public interface Observer {
-    void update(Hero hero);
+    void update(Subject subject);
 }

@@ -2,10 +2,8 @@ import java.util.Random;
 
 public class Hero extends Subject {
 
-    private int hp;
-
     public Hero() {
-        hp = 100;
+        super(100);
     }
 
     public void encountMonster() {
@@ -23,14 +21,6 @@ public class Hero extends Subject {
         } else {
             System.out.println("現在の体力は " + hp + " だ！\n");
         }
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
     }
 }
 
